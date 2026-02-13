@@ -1,0 +1,31 @@
+;; Simple Token Sender Contract
+
+(define-map balances { user: principal } { amount: uint })
+
+;; Deposit tokens
+(define-public (deposit (amount uint))
+  (let ((current (default-to u0 (get amount (map-get? balances { user: tx-sender })))))
+    (map-set balances { user: tx-sender } { amount: (+ current amount) })
+    (ok "Deposited")
+  )
+)
+
+;; Send tokens to another user
+(define-public (send-tokens (to principal) (amount uint))
+  (let ((current (default-to u0 (get amount (map-get? balances { user: tx-sender })))))
+    (if (>= current amount)
+        (begin
+          (map-set balances { user: tx-sender } { amount: (- current amount) })
+          (let ((to-current (default-to u0 (get amount (map-get? balances { user: to })))))
+            (map-set balances { user: to } { amount: (+ to-current amount) })
+          )
+          (ok "Tokens sent")
+        )
+        (err u101)
+    )
+  )
+)
+
+;; Check balance
+(define-read-only (get-balance (user principal))
+  (default-to u0 (get amount (map-get? balances { user }))))
