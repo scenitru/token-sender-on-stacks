@@ -25,3 +25,4 @@ Simple on-chain token sending DApp on Stacks blockchain.
 2. Install dependencies:
 3. Start the project:
 > Browser opens localhost with the Token Sender DApp
+2026-02-14 20:58:54 - added log
