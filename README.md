@@ -27,3 +27,4 @@ Simple on-chain token sending DApp on Stacks blockchain.
 > Browser opens localhost with the Token Sender DApp
 2026-02-14 20:58:54 - added log
 2026-02-14 20:59:14 - refined validation
+2026-02-14 20:59:23 - updated sender function
