@@ -281,3 +281,4 @@
 2026-02-23 12:02:29 - added log
 2026-02-23 12:03:33 - updated sender function
 2026-02-24 10:44:14 - updated sender function
+2026-02-24 10:44:52 - refined validation
