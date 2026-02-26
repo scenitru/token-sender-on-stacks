@@ -365,3 +365,4 @@
 2026-02-26 17:57:51 - updated sender function
 2026-02-26 17:58:59 - updated sender function
 2026-02-26 17:59:09 - added log
+2026-02-26 17:59:29 - refined validation
