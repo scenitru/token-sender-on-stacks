@@ -364,3 +364,4 @@ Simple on-chain token sending DApp on Stacks blockchain.
 2026-02-26 17:54:19 - refined validation
 2026-02-26 17:54:37 - refined validation
 2026-02-26 17:54:57 - added log
+2026-02-26 17:55:28 - updated sender function
